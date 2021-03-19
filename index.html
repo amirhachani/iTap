@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title style="left: 50px;">iTap</title>
+</head>
+
+<body style="background-color: black">
+  <div class="app";>
+    <header class="effect" style="background-image: url(./Disco.gif);height: 350px;">
+      <h1 style="color: white">iTap</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <br>
+
+      <h2 style="color: white ; text-align: center;"> TRY it it's a lot of fun <br>
+        <br>
+        Each color defines a beat.. Try to tap !
+    </header>
+    <div ></div>
+    <div class="pads">
+      <div class="pad1">
+        <h4 id="1" class="single-pad">Tap A</h4>
+        <audio class="sound1" src="./Beats/Sound1.mp3"></audio>
+      </div>
+      <div class="pad2">
+        <h4 id="2" class="single-pad" >Tap Z</h4>
+        <audio class="sound2" src="./Beats/Sound2.mp3"></audio>
+      </div>
+      <div class="pad3">
+        <h4 id="3" class="single-pad" >Tap E</h4>
+        <audio class="sound3" src="./Beats/Sound3.mp3"></audio>
+      </div>
+      <div class="pad4">
+        <h4 id="4" class="single-pad" >Tap R</h4>
+        <audio class="sound4" src="./Beats/Sound4.mp3"></audio>
+      </div>
+      <div class="pad5">
+        <h4 id="5" class="single-pad" >Tap T</h4>
+        <audio class="sound5" src="./Beats/Sound5.mp3"></audio>
+      </div>
+      <div class="pad6">
+        <h4 id="6" class="single-pad" >Tap Y</h4>
+        <audio class="sound6" src="./Beats/Sound6.mp3"></audio>
+      </div>
+      <br>
+      <div class="pad7">
+        <h4 id="7" class="single-pad" >Tap Q</h4>
+        <audio class="sound6" src="./Beats/Sound7.mp3"></audio>
+      </div>
+      <div class="pad8">
+        <h4 id="8" class="single-pad" >Tap S</h4>
+        <audio class="sound6" src="./Beats/Sound8.mp3"></audio>
+      </div>
+      <div class="pad9">
+        <h4 id="9" class="single-pad" >Tap D</h4>
+        <audio class="sound6" src="./Beats/Sound9.mp3"></audio>
+      </div>
+      <div class="pad10">
+        <h4 id="10" class="single-pad" >Tap F</h4>
+        <audio class="sound6" src="./Beats/Sound10.mp3"></audio>
+      </div>
+      <div class="pad11">
+        <h4 id="11" class="single-pad" >Tap G</h4>
+        <audio class="sound6" src="./Beats/Sound11.mp3"></audio>
+      </div>
+      <div class="pad12">
+        <h4 id="12" class="single-pad" >Tap H</h4>
+        <audio class="sound6" src="./Beats/Sound12.mp3"></audio>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script>
+
+
+    $(document).keypress(function (event) {
+      if(keys[event.key]) {
+        $(".effect").fadeToggle(80).fadeIn(80)
+        playSong('Sound' + keys[event.key])
+      }
+    });
+
+    $('.single-pad').click(function(event) {
+      playSong('Sound' + event.target.id)
+    });
+
+    var keys = {
+      "a": 1,
+      "z": 2,
+      "e": 3,
+      "r": 4,
+      "t": 5,
+      "y": 6,
+      "q":7,
+      "s":8,
+      "d":9,
+      "f":10,
+      "g":11,
+      "h":12,
+    }
+
+    function playSong(songName) {
+      let audio = new Audio("./Beats/" + songName +".mp3");
+      audio.play();
+    }
+
+
+  </script>
+</body>
+
+</html>
