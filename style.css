@@ -1,0 +1,131 @@
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.app 
+{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./pexels-pixabay-247676.jpg");
+}
+
+header h1 
+{
+  margin: 100px -24px 9px 8px;
+  text-align: center;
+  font-size: 74px;
+}
+
+header p 
+{
+  font-size: 20px;
+}
+
+.pads
+{
+  /* background: lightblue; */
+  width: 100%;
+  display: flex;
+  text-align: center;
+  text-decoration-style: double;
+}
+
+.pads > div {
+  height: 100px;
+  width: 100px;
+  flex: 1;
+}
+
+.pad1 
+{
+  background:green;
+  opacity: 0.9;
+}
+
+.pad2 
+{
+  background:red;
+  opacity: 0.9;
+}
+
+.pad3 
+{
+  background:violet;
+  opacity: 0.9;
+}
+
+.pad4 
+{
+  background:lightblue;
+  opacity: 0.9;
+}
+
+.pad5 
+{
+  background: darkblue;
+  opacity: 0.9;
+}
+
+.pad6 
+{
+  background:maroon;
+  opacity: 0.9;
+}
+
+.pad7
+{
+  background: yellow;
+  opacity: 0.9;
+}
+
+.pad8 
+{
+  background: pink;
+  opacity: 0.9;
+}
+
+.pad9 
+{
+  background:white;
+  opacity: 0.9;
+}
+
+.pad10 
+{
+  background:green;
+  opacity: 0.9;
+}
+
+.pad11 
+{
+  background:greenyellow;
+  opacity: 0.9;
+}
+.pad12
+{
+  background:darkmagenta;
+  opacity: 0.9;
+}
+
+
+
+
+
+
+.pads
+{
+  text-decoration-style: wavy;
+  padding-bottom: 150px;
+  background-image: url("./pexels-pixabay-247676.jpg");
+  cursor: pointer;
+}
+
+
+h4 {
+  line-height: 6em;
+  margin: 0
+}
